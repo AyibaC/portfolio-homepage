@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayiba's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script type="text/javascript" src="fullpage.js"></script>
+    <script src="https://kit.fontawesome.com/2c915421c0.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="anime.min.js"></script>
+    <!-- <script defer type="text/javascript" src="noframework.waypoints.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <header>
+
+    </header>
+    <main>
+        <div id="fullpage">
+            <div class="section">
+                <div class="home-grid-wrapper">
+                    <div class="home-grid">
+                        <!-- <svg viewBox="-50 -50 100 100" height="0" width="0">
+                            <clipPath id="myClip">
+                                <circle cx="0" cy="0" r="50" fill="black" />
+                            </clipPath>
+                        </svg> -->
+                        <!-- <div class="photo-holder"></div> -->
+                        <div class="image-container">
+                            <img class="ayiba-photo" src="./assets/ayiba-photo.JPG" alt="photo of Ayiba Cesario">
+                        </div>
+                        <div class='home-grid-words'>
+                            <h1>Ayiba Cesario</h1>
+                            <h2>Fullstack Web Developer</h2>
+                        </div>
+                    </div>
+                    <ul class="title-list circle-container">
+                        <li class="skill-container">
+                            <h3 class="hidden skill-list">HTML5</h3>
+                            <i class="fab fa-html5 skill-logo"></i>
+                            <ul class="hidden skill-list"></ul>
+                        </li>
+                        <li class="skill-container">
+                            <h3 class="hidden skill-list css">CSS3</h3>
+                            <i class="fab fa-css3-alt skill-logo css"></i>
+                            <ul class='hidden skill-list css'>
+                                <li>Responsive Design,</li>
+                                <li>Flexbox &amp; CSS Grid,</li>
+                                <li>SASS,</li>
+                                <li>CSS Modules,</li>
+                                <li>CSS Frameworks</li>
+                            </ul>
+                        </li>
+                        <li class="skill-container">
+                            <h3 class="hidden skill-list">JavaScript</h3>
+                            <i class="fab fa-js-square skill-logo"></i>
+                            <ul class='hidden skill-list'>
+                                <li>ES6+,</li>
+                                <li>AJAX,</li>
+                                <li>APIs - REST and GraphQL,</li>
+                                <li>Animation (Greensock & Three.js),</li>
+                                <li>Graphing (d3.js) & Realtime (websockets),</li>
+                                <li>TypeScript,</li>
+                                <li>Cypress,</li>
+                                <li>Jest,</li>
+                                <li>Webpack,</li>
+                                <li>OAuth</li>
+                            </ul>
+                        </li>
+                        <li class="skill-container">
+                            <h3 class="hidden skill-list">React</h3>
+                            <i class="fab fa-react skill-logo"></i>
+                            <ul class='hidden skill-list'>
+                                <li>Hooks,</li>
+                                <li>Context,</li>
+                                <li>Material UI</li>
+                            </ul>
+                        </li>
+                        <li class="skill-container">
+                            <h3 class="hidden skill-list">Node.js</h3>
+                            <i class="fab fa-node skill-logo"></i>
+                            <ul class='hidden skill-list'> 
+                                <li>Vanilla Node,</li>
+                                <li>Express</li>
+                            </ul>
+                        </li>
+                        <li class="skill-container">
+                            <h3 class="hidden skill-list">Databases</h3>
+                            <i class="fas fa-database skill-logo"></i>
+                            <ul class='hidden skill-list'> 
+                                <li>SQL - Postgres,</li>
+                                <li>NoSQL - MongoDB with Mongoose.js,</li>
+                                <li>Redis,</li>
+                                <li>Firebase</li>
+                            </ul>
+                        </li>
+                        <li class="skill-container">
+                            <h3 class="hidden skill-list">DevOps</h3>
+                            <i class="fas fa-infinity skill-logo"></i>
+                            <ul class='hidden skill-list'>
+                                <li>Docker & Kubernetes,</li>
+                                <li>Heroku (inc. pipelines),</li>
+                                <li>Serverless (inc. Netlify)</li>
+                            </ul>
+                        </li>
+                        <li class="skill-container">
+                            <h3 class="hidden skill-list">Project Management</h3>
+                            <i class="fas fa-tasks skill-logo"></i>
+                            <ul class='hidden skill-list'>
+                                <li>PRINCE2 Certified</li>
+                            </ul>
+                        </li>
+                        <li class="skill-container">
+                            <h3></h3>
+                            <i class="fas fa-arrow-up skill-logo"></i>
+                            <ul class='skill-list'>
+                                <li>Click to learn more about my skills</li>
+                            </ul>
+                        </li>
+                        <script>
+                            anime({
+                            targets: '.fa-arrow-up',
+                            translateY: '-100%',
+                            easing: 'easeInCubic',
+                            direction: 'alternate',
+                            duration: 750,
+                            loop: true
+                            });
+                        </script>
+                    </ul>
+                </div>
+            </div>
+            <div class="section about" >
+                <h1>About me</h1> 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus illo quos ipsum tempora, odit cupiditate error est hic possimus ducimus modi magnam earum. Asperiores quibusdam rem, nemo hic incidunt deleniti.
+                Velit, delectus fuga. Ducimus accusamus consequuntur ullam eveniet perspiciatis minima odit praesentium unde! Amet magni tenetur maxime enim dicta recusandae, omnis ipsa neque natus, veritatis praesentium nulla assumenda tempore officiis.
+                Quam, sit sequi quae illum at rerum doloremque magni quod. Blanditiis minus impedit sunt itaque alias perspiciatis facere incidunt, voluptates neque nesciunt. Officia nesciunt iusto est non molestias facilis labore.</p>
+            </div>
+            <div class="section experience" id="experience-section" >
+                <h1>Experience</h1>
+                <!-- <div class="anim"></div> -->
+                <ol class="experience-list"> 
+                    <li class="experience-item">
+                        <svg height="20" width="20" class="circle-svg one">
+                            <circle cx="10" cy="10" r="10" class="experience-circle" fill="#00755e"/>
+                        </svg>
+                        <div class="experience-text deloitte">
+                            <img src="assets/us-deloitte-logo.webp" alt="deloitte logo">
+                            <h2>Deloitte</h2>
+                            <p>Risk Advisory Consultant</p>
+                            <p>September 2017 - present</p>
+                        </div>
+                    </li>
+                    <li class="experience-item" >
+                        <svg height="20" width="20" class="circle-svg two">
+                            <circle cx="10" cy="10" r="10" class="experience-circle" fill="#00755e"/>
+                        </svg>
+                        <div class="experience-text jump">
+                            <img src="assets/the-jump-digital-school.png" alt="The Jump Digital School logo">
+                            <h2>The Jump Digital School</h2>
+                            <p>Software Engineer Training</p>
+                            <p>August 2020 - April 2021</p>
+                        </div>
+                    </li>
+                    <li class="experience-item">
+                        <svg height="20" width="20" class="circle-svg three">
+                            <circle cx="10" cy="10" r="10" class="experience-circle" fill="#00755e"/>
+                        </svg>
+                        <div class="experience-text kings">
+                            <img src="assets/kcl-logo.png" alt="King's College London logo">
+                            <h2>King's College London</h2>
+                            <p>BSc (Hons) Mathematics</p>
+                            <p>September 2014 - June 2017</p>
+                        </div>
+                    </li>
+                    <li class="experience-item">
+                        <svg height="20" width="20" class="circle-svg four">
+                            <circle cx="10" cy="10" r="10" class="experience-circle" fill="#00755e"/>
+                        </svg>
+                        <div class="experience-text kegs">
+                            <h2>A-Levels</h2>
+                            <p>King Edward IV Grammar School</p>
+                            <p>Mathematics: A*, Further Mathematics: B, English: B</p>
+                            <p>September 2012 - July 2014</p>
+                        </div>
+                    </li>
+                    <li class="experience-item">
+                        <svg height="20" width="20" class="circle-svg five">
+                            <circle cx="10" cy="10" r="10" class="experience-circle" fill="#00755e"/>
+                        </svg>
+                        <div class="experience-text moulsham">
+                            <h2>GCSEs</h2>
+                            <p>Moulsham High School</p>
+                            <p>11 GCSEs - grade A - C, including Maths and English</p>
+                            <p>September 2007 - July 2012</p>
+                        </div>
+                    </li>
+                </ol>
+                <svg viewBox="-100 -50 200 100" id='timeline' preserveAspectRatio="none" height=100% width=100%>
+                    <path d="M -99 -49 C -80 25, -70 25, 0 -5 S 25 60 ,70 20" stroke="#00755e" stroke-width="0.5" fill="transparent" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="section" >
+                <div class="project-grid-container">
+                    <div class="project-grid">
+                        <h1>Projects</h1>
+                        <div class='overlay'></div>
+                    </div>
+                    <div class="project-grid">
+                        <h2 class="pg-title">Full Stack Language Learning App</h2>
+                        <div class='overlay'></div>
+                    </div>
+                    <div class="project-grid">
+                        <h2 class="pg-title">B</h2>
+                        <div class='overlay'></div>
+                    </div>
+                    <div class="project-grid">
+                        <h2 class="pg-title">*Server App*</h2>
+                        <div class='overlay'></div>
+                    </div>
+                    <div class="project-grid">
+                        <h2 class="pg-title">*Serverless App*</h2>
+                        <div class='overlay'></div>
+                    </div>
+                    <div class="project-grid">
+                        <h2 class="pg-title">*Basic React App*</h2>
+                        <div class='overlay'></div>
+                    </div>
+                    <div class="project-grid">
+                        <h2 class="pg-title">*Ajax App*</h2>
+                        <div class='overlay'></div>
+                    </div>
+                    <div class="project-grid fe-mentor">
+                        <h2 class="pg-title">FrontEnd Mentor Challenge</h2>
+                        <div class='overlay'></div>
+                    </div>
+                    <div class="project-grid kkw">
+                        <h2 class="pg-title">KKW Beauty Homage Page</h2>
+                        <div class='overlay'></div>
+                    </div>
+                    <div class="project-grid">
+                        <h2 class="pg-title">TasteDive API</h2>
+                        <div class='overlay'></div>
+                    </div>
+                    <div class="project-grid">
+                        <h2 class="pg-title">Hotel Management App</h2>
+                        <div class='overlay'></div>
+                    </div>
+                    <div class="project-grid">
+                        <h2 class="pg-title">*Console App*</h2>
+                        <div class='overlay'></div>
+                    </div>
+                </div> 
+            </div>
+            <div class="section contact">
+                <h1>Get in touch at...</h1> 
+                <!-- email, phone, github, linkedin -->
+                <div class="contact-container">
+                    <a title="email" class="email-link" href="mailto:ayibacesario@hotmail.co.uk"><i class="far fa-envelope"></i>ayibacesario@hotmail.co.uk</a>
+                    <div class="small-contact-icons">
+                        <a title="GitHub" href="https://github.com/AyibaC?tab=repositories" target="_blank"><i class="fab fa-github"></i></a> 
+                        <a title="CodePen" href="https://codepen.io/AyibaC" target="_blank"><i class="fab fa-codepen"></i></a> 
+                        <a title="LinkedIn" href="https://www.linkedin.com/in/ayiba-cesario-a62871136/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
