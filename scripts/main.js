@@ -1,21 +1,22 @@
 //enable full page
-const myFullPage = new fullpage('#fullpage',{
-    licenseKey: '3310F724-FAB2489A-857B00AC-B4CA87B4',
-    anchors:['home','about','experience','projects','contact'],
-});
+// const myFullPage = new fullpage('#fullpage',{
+//     licenseKey: '3310F724-FAB2489A-857B00AC-B4CA87B4',
+//     anchors:['home','about','experience','projects','contact'],
+// });
 
 //makes skills show after clicking on icon
-const skillsIcon = document.getElementsByClassName('skill-logo');
-console.log(skillsIcon);
-for(const i of skillsIcon){
+const skillsIcons = document.getElementsByClassName('skill-logo');
+console.log('skillsIcons', skillsIcons);
+const hiddenClass = 'hidden';
+for(const i of skillsIcons){
     i.addEventListener("click", (e) => {
         e.preventDefault();
-            if (i.nextElementSibling.classList.contains("hidden")){
-                i.nextElementSibling.classList.remove("hidden");
-                i.previousElementSibling.classList.remove("hidden");
+            if (i.nextElementSibling.classList.contains(hiddenClass)){
+                i.nextElementSibling.classList.remove(hiddenClass);
+                i.previousElementSibling.classList.remove(hiddenClass);
             } else {
-                i.nextElementSibling.classList.add("hidden");
-                i.previousElementSibling.classList.add("hidden");
+                i.nextElementSibling.classList.add(hiddenClass);
+                i.previousElementSibling.classList.add(hiddenClass);
             }
     });
 };
