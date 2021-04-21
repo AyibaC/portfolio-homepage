@@ -167,16 +167,17 @@ ul.skill-list {
 .experience-text {
     position: absolute;
     opacity: 0;
-    animation: fadeIn ease 2s;
+    transition: 2s opacity;
+    /* animation: fadeIn ease 2s;
     animation-delay: 2s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
     width: 25%;
 }
 
-@keyframes fadeIn {
+/* @keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
-    }
+    } */
 
 
 .experience-text img {
