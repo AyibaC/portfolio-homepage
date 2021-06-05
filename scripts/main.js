@@ -91,9 +91,14 @@ for (let i=0; i<11; i++) {
 
     close[i].onclick = function() {
         modal[i].style.display = "none";
-}
+    }
+
+    window.onclick = function() {
+        if (modal[i].style.display == "block") {
+        modal[i].style.display = "none";
+    }
 }
     
-
+}
 
 
