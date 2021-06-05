@@ -6,6 +6,16 @@ body {
   /* padding: 0 5% 5% 5%; */
 }
 
+a:-webkit-any-link {
+    color: #00755e;
+    text-decoration: none;
+  }
+
+button {
+    padding: 0;
+    border: 0;
+}
+
 .section.about,
 .section.experience,
 .section.contact {
@@ -330,6 +340,53 @@ ul.skill-list {
   background-position: center center;
 }
 
+button h2 {
+    color: #00755e;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    top: 20%;
+    width: 60%;
+    min-height: 40%;
+    left: 20%;
+    border-radius: 5%;
+    background-color: #f3cfc6;
+    border: 1px solid #00755e;
+    box-shadow: 5px 10px;
+}
+
+
+.modal-content img {
+    width: 40%;
+    padding: 0 5% 5% 5%;
+}
+
+.modal-content p {
+    width: 40%;
+    padding: 0 5% 5% 5%;
+}
+
+.modal-content h2 {
+    padding: 5%;
+}
+
+a.modal-link {
+    text-decoration: underline;
+}
+
+.modal-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+span {
+    font-size: 2em;
+    padding: 5%;
+}
+
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -340,10 +397,7 @@ ul.skill-list {
   font-size: 7rem;
 }
 
-a:-webkit-any-link {
-  color: #00755e;
-  text-decoration: none;
-}
+
 
 .email-link {
   font-size: 1.5rem;

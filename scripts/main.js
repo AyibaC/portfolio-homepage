@@ -79,3 +79,21 @@ for(const i of skillsIcons){
             }
     });
 };
+
+//project modals
+const modal = document.getElementsByClassName("modal");
+const btn = document.getElementsByClassName("modal-btn");
+const close = document.getElementsByClassName("close")
+for (let i=0; i<11; i++) {
+    btn[i].onclick = function(){
+        modal[i].style.display = "block";
+    }
+
+    close[i].onclick = function() {
+        modal[i].style.display = "none";
+}
+}
+    
+
+
+
