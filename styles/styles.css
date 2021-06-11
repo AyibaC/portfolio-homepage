@@ -158,6 +158,10 @@ ul.skill-list {
   margin: 0;
 }
 
+.section.about p {
+  padding-bottom: 2%;
+}
+
 /* .experience-item {
     offset-path: path("M -99 -49 C -100 -50, -90 5,-15 0 S 45 75 ,99 40");
     animation-name: curve; 
@@ -258,9 +262,10 @@ ul.skill-list {
 
 .project-grid-container {
   display: grid;
-  height: 100%;
+  margin: 5%;
+  height: 90%;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .project-grid {
@@ -343,6 +348,8 @@ ul.skill-list {
 button h2 {
     color: #00755e;
 }
+
+
 
 .modal {
     display: none;

@@ -81,24 +81,42 @@ for(const i of skillsIcons){
 };
 
 //project modals
-const modal = document.getElementsByClassName("modal");
+const modals = document.getElementsByClassName("modal");
 const btn = document.getElementsByClassName("modal-btn");
-const close = document.getElementsByClassName("close")
-for (let i=0; i<11; i++) {
-    btn[i].onclick = function(){
-        modal[i].style.display = "block";
-    }
+const close = document.getElementsByClassName("close");
+for (let i=0; i<modals.length; i++) {
+    const currentModal = modals[i];
+    const currentBtn = btn[i];
+    const currentClose = close[i];
 
-    close[i].onclick = function() {
-        modal[i].style.display = "none";
-    }
+    // document.addEventListener("click", function(event){
+    //     if (event.target.matches(".close") || !event.target.closest(".modal")) {
+    //         currentModal.style.display = "none";
+    //         }
+    // });
 
-    window.onclick = function() {
-        if (modal[i].style.display == "block") {
-        modal[i].style.display = "none";
-    }
-}
-    
-}
+
+    currentBtn.addEventListener("click", function(){
+        currentModal.style.display = "block";
+    })
+
+    currentClose.addEventListener("click", function(){
+        currentModal.style.display = "none";
+    })
+
+    // document.addEventListener("click", function(event){
+    //     for (const m of modals) {
+    //         if (m.style.display == "block" && !event.target.closest(".modal")) {
+    //                 console.log(m);
+    //                 console.log("modal display", m.style.display);
+    //                 console.log("event target", event.target);
+    //                 m.style.display = "none";
+    //         }
+    //     }
+        
+    // });
+
+
+};
 
 
