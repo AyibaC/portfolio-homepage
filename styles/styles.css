@@ -310,6 +310,13 @@ ul.skill-list {
   visibility: visible;
 }
 
+.to-do-serverless {
+  background-image: url("./../assets/to-do-list.png");
+  background-size: contain;
+  /* background-repeat: no-repeat; */
+  background-position: center center;
+}
+
 .kkw {
   background-image: url("./../assets/kkw-screenshot.png");
   background-size: contain;
@@ -365,6 +372,9 @@ button h2 {
     box-shadow: 5px 10px;
 }
 
+.modal.open {
+  display: block;
+}
 
 .modal-content img {
     width: 40%;

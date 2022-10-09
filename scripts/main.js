@@ -83,40 +83,41 @@ for(const i of skillsIcons){
 //project modals
 const modals = document.getElementsByClassName("modal");
 const btn = document.getElementsByClassName("modal-btn");
-const close = document.getElementsByClassName("close");
+
+const closeAllModals = () => {
+    const openModals = document.querySelectorAll(".modal.open");
+    for (const openMod of openModals){
+        openMod.classList.remove("open");
+    }
+};
+
+document.addEventListener("click", (e)=>{
+    console.log('doc click');
+    const { target } = e;
+    console.log('target', target);
+    console.log(target.closest('.modal'));
+    if(!target?.closest('.modal')){
+        console.log('was outside modal');
+        closeAllModals();
+    }
+})
+
 for (let i=0; i<modals.length; i++) {
     const currentModal = modals[i];
     const currentBtn = btn[i];
-    const currentClose = close[i];
+    const currentClose = currentModal.querySelector('.close');
 
-    // document.addEventListener("click", function(event){
-    //     if (event.target.matches(".close") || !event.target.closest(".modal")) {
-    //         currentModal.style.display = "none";
-    //         }
-    // });
-
-
-    currentBtn.addEventListener("click", function(){
-        currentModal.style.display = "block";
+    currentBtn.addEventListener("click", (e)=>{
+        e.stopPropagation(); // stops the 'click' listener on the doc from being reached
+        closeAllModals(); // so you don't get stacked modals.
+        currentModal.classList.add('open');
     })
 
-    currentClose.addEventListener("click", function(){
-        currentModal.style.display = "none";
+    currentClose.addEventListener("click", (e)=>{
+        console.log('close modal btn click');
+        e.stopPropagation();
+        currentModal.classList.remove("open");
     })
-
-    // document.addEventListener("click", function(event){
-    //     for (const m of modals) {
-    //         if (m.style.display == "block" && !event.target.closest(".modal")) {
-    //                 console.log(m);
-    //                 console.log("modal display", m.style.display);
-    //                 console.log("event target", event.target);
-    //                 m.style.display = "none";
-    //         }
-    //     }
-        
-    // });
-
-
 };
 
 
