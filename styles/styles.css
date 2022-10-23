@@ -162,102 +162,71 @@ ul.skill-list {
   padding-bottom: 2%;
 }
 
-/* .experience-item {
-    offset-path: path("M -99 -49 C -100 -50, -90 5,-15 0 S 45 75 ,99 40");
-    animation-name: curve; 
-    animation-duration: 3s;
-    animation-iteration-count: 1;
+.experience-item {
+    width: 20%;
 }
 
 @keyframes curve {
     100% { 
         offset-distance: 100%; 
     }
-    } */
+    } 
 
-.anim {
-  border: solid 1px;
-  width: 10px;
-  height: 10px;
-  position: absolute;
-}
-
-.circle-svg {
-  position: absolute;
-}
 
 /* .experience-circle {
     position: absolute;
 } */
 
-.experience-text {
-  position: absolute;
-  opacity: 0;
-  transition: 2s opacity;
-  /* animation: fadeIn ease 2s;
-    animation-delay: 2s;
-    animation-fill-mode: forwards; */
-  width: 25%;
-}
 
 /* @keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
     } */
 
+
 .experience-text img {
   width: 80%;
 }
 
-.experience-item {
-  position: absolute;
-  z-index: 1;
-  height: 30%;
-  width: 100%;
-  /* top: 0;
-    left: 0; */
-}
-
-.deloitte {
-  left: 21px;
-}
-
-.jump {
-  left: 21px;
-}
-
-.kings {
-  left: 21px;
-}
-
-.kegs {
-  left: 21px;
-  width: 30%;
-}
-
-.moulsham {
-  top: 21px;
-  width: 30%;
-}
 
 .experience-text > p,
 .experience-text > h2 {
   font-size: 0.8rem;
 }
 
-#timeline {
-  /* height: 100%;
-    width: 90%; */
-  position: relative;
-  height: 80%;
-  width: 90%;
-  margin: 0 auto;
-}
-
 .experience-list {
+  display: flex;
   position: absolute;
   height: 80%;
   width: 90%;
+}
+
+.js-project-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: circle(30% at center);
+}
+
+.css-project-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: circle(30% at center);
+}
+
+.project-image-container {
+  max-width: 200px;
+  max-height: 200px;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  overflow: hidden;
+  align-self: center;
+  justify-self: center;
+}
+
+.project-list .js {
+  max-height: 75vh;
 }
 
 .project-grid-container {
