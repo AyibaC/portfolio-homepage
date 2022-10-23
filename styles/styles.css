@@ -292,6 +292,10 @@ ul.skill-list {
   visibility: visible;
 }
 
+.project-grid h1 {
+  margin-left: 2%;
+}
+
 .pg-title {
   height: 100%;
   width: 100%;
@@ -312,6 +316,13 @@ ul.skill-list {
 
 .to-do-serverless {
   background-image: url("./../assets/to-do-list.png");
+  background-size: contain;
+  /* background-repeat: no-repeat; */
+  background-position: center center;
+}
+
+.skincare-shelf {
+  background-image: url("./../assets/skincare-shelf-screenshot.png");
   background-size: contain;
   /* background-repeat: no-repeat; */
   background-position: center center;
