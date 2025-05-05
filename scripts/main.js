@@ -91,16 +91,16 @@ const closeAllModals = () => {
     }
 };
 
-document.addEventListener("click", (e)=>{
-    console.log('doc click');
-    const { target } = e;
-    console.log('target', target);
-    console.log(target.closest('.modal'));
-    if(!target?.closest('.modal')){
-        console.log('was outside modal');
-        closeAllModals();
-    }
-})
+// document.addEventListener("click", (e)=>{
+//     console.log('doc click');
+//     const { target } = e;
+//     console.log('target', target);
+//     console.log(target.closest('.modal'));
+//     if(!target?.closest('.modal')){
+//         console.log('was outside modal');
+//         closeAllModals();
+//     }
+// })
 
 for (let i=0; i<modals.length; i++) {
     const currentModal = modals[i];
@@ -120,4 +120,39 @@ for (let i=0; i<modals.length; i++) {
     })
 };
 
+
+//open contact page
+let contactLink = document.getElementsByClassName('contact-link')[0];
+const homepage = document.querySelector("#homepage main");
+contactLink.addEventListener("click",(e)=>{
+    e.preventDefault();
+    if(document.getElementsByClassName("home-content").length > 0){
+        console.log("found home-content");
+        const homeContent = document.getElementsByClassName("home-content")[0];
+        homeContent.remove()
+
+        const contact = document.createElement("div");
+        contact.classList.add("container", "contact");
+        contact.innerHTML = `<div class="text">
+                    <h1>Get in touch...</h1>
+                    <ul>
+                        <li><a title="email" class="email-link" href="mailto:ayibacesario@hotmail.co.uk"><i class="far fa-envelope"></i> ayibacesario@hotmail.co.uk</a></li>
+                        <li><a title="GitHub" href="https://github.com/AyibaC?tab=repositories" target="_blank"><i class="fab fa-github"></i> AyibaC</a></li>
+                        <li><a title="LinkedIn" href="https://www.linkedin.com/in/ayiba-cesario-a62871136/" target="_blank"><i class="fab fa-linkedin"></i> Ayiba Cesario</a></li>
+                    </ul>
+                </div>`;
+        homepage.appendChild(contact);
+    } else {
+        console.log("didn't find home-content");
+        const contact = document.getElementsByClassName("container contact")[0];
+        contact.remove();
+
+        const homeContent = document.createElement("div");
+        homeContent.classList.add("home-content");
+        homeContent.innerHTML = `<h1 class="home-title">Ayiba C. Cesario</h1>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis</p>`;
+        homepage.appendChild(homeContent);
+    };
+    
+})
 

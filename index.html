@@ -26,362 +26,47 @@
     <!-- SCRIPTS -->
     <!-- Third party Scripts -->
     <!-- <script type="text/javascript" src="fullpage.js"></script> -->
-    <script src="https://kit.fontawesome.com/2c915421c0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-NN33hT3+..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js" integrity="sha512-HqbDsHIJoZ36Csd7NMupWFxC7e7aX2qm213sX+hirN+yEx/eUNlZrTWPs1dUQDEW4fMVkerv1PfMohR1WdFFJQ==" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
-
     <!-- My Script -->
     <script src="./scripts/main.js" defer></script>
 </head>
 <body>
-    
-    <header>
-
-    </header>
-    <main>
-        <div id="fullpage">
-            <div class="section">
-                <div class="home-grid-wrapper">
-                    <div class="home-grid">
-                        <!-- <svg viewBox="-50 -50 100 100" height="0" width="0">
-                            <clipPath id="myClip">
-                                <circle cx="0" cy="0" r="50" fill="black" />
-                            </clipPath>
-                        </svg> -->
-                        <!-- <div class="photo-holder"></div> -->
-                        <div class="image-container">
-                            <img class="ayiba-photo" src="./assets/ayiba-photo.JPG" alt="photo of Ayiba Cesario">
-                        </div>
-                        <div class='home-grid-words'>
-                            <h1>Ayiba Cesario</h1>
-                            <h2>Fullstack Web Developer</h2>
-                        </div>
-                    </div>
-                    <ul class="title-list circle-container">
-                        <li class="skill-container">
-                            <h3 class="hidden skill-list">HTML5</h3>
-                            <i class="fab fa-html5 skill-logo"></i>
-                            <ul class="hidden skill-list"></ul>
-                        </li>
-                        <li class="skill-container">
-                            <h3 class="hidden skill-list css">CSS3</h3>
-                            <i class="fab fa-css3-alt skill-logo css"></i>
-                            <ul class='hidden skill-list css'>
-                                <li>Responsive Design,</li>
-                                <li>Flexbox &amp; CSS Grid,</li>
-                                <li>SASS,</li>
-                                <li>CSS Modules,</li>
-                                <li>CSS Frameworks</li>
-                            </ul>
-                        </li>
-                        <li class="skill-container">
-                            <h3 class="hidden skill-list">JavaScript</h3>
-                            <i class="fab fa-js-square skill-logo"></i>
-                            <ul class='hidden skill-list'>
-                                <li>ES6+,</li>
-                                <li>AJAX,</li>
-                                <li>APIs - REST and GraphQL,</li>
-                                <li>Animation (Greensock & Three.js),</li>
-                                <li>Graphing (d3.js) & Realtime (websockets),</li>
-                                <li>TypeScript,</li>
-                                <li>Cypress,</li>
-                                <li>Jest,</li>
-                                <li>Webpack,</li>
-                                <li>OAuth</li>
-                            </ul>
-                        </li>
-                        <li class="skill-container">
-                            <h3 class="hidden skill-list">React</h3>
-                            <i class="fab fa-react skill-logo"></i>
-                            <ul class='hidden skill-list'>
-                                <li>Hooks,</li>
-                                <li>Context,</li>
-                                <li>Material UI</li>
-                            </ul>
-                        </li>
-                        <li class="skill-container">
-                            <h3 class="hidden skill-list">Node.js</h3>
-                            <i class="fab fa-node skill-logo"></i>
-                            <ul class='hidden skill-list'> 
-                                <li>Vanilla Node,</li>
-                                <li>Express</li>
-                            </ul>
-                        </li>
-                        <li class="skill-container">
-                            <h3 class="hidden skill-list">Databases</h3>
-                            <i class="fas fa-database skill-logo"></i>
-                            <ul class='hidden skill-list'> 
-                                <li>SQL - Postgres,</li>
-                                <li>NoSQL - MongoDB with Mongoose.js,</li>
-                                <li>Redis,</li>
-                                <li>Firebase</li>
-                            </ul>
-                        </li>
-                        <li class="skill-container">
-                            <h3 class="hidden skill-list">DevOps</h3>
-                            <i class="fas fa-infinity skill-logo"></i>
-                            <ul class='hidden skill-list'>
-                                <li>Docker & Kubernetes,</li>
-                                <li>Heroku (inc. pipelines),</li>
-                                <li>Serverless (inc. Netlify)</li>
-                            </ul>
-                        </li>
-                        <li class="skill-container">
-                            <h3 class="hidden skill-list">Project Management</h3>
-                            <i class="fas fa-tasks skill-logo"></i>
-                            <ul class='hidden skill-list'>
-                                <li>PRINCE2 Certified</li>
-                            </ul>
-                        </li>
-                        <li class="skill-container">
-                            <h3></h3>
-                            <i class="fas fa-arrow-up"></i>
-                            <ul class='skill-list'>
-                                <li>Click to learn more about my skills</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+    <div id="homepage">
+        <main>
+            <nav>
+                <a href="./about.html">About</a>
+                <a href="./experience.html">Experience</a>
+                <a href="./projects.html">Projects</a>
+                <span class="contact-link" >Contact</span>
+            </nav>
+            <div class="home-content">
+                <h1 class="home-title">Ayiba C. Cesario</h1>
+                <p class="home-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis</p>
             </div>
-            <div class="section about" >
-                <h1>About me</h1> 
-                <p>Hi! I'm currently a senior consultant working in Risk Analytics at Deloitte and I'm looking to bring my creativity, problem-solving skills and hands-on tech knowledge to web development and engineering roles.</p>
-                <p>A great passion of mine is social justice and I spend a lot of time at work highlighting issues affecting the black community and trying to affect change in those areas. When I'm not working on my coding projects or trying to ~end~ racism, I enjoy attending professional choreography classes and learning about (and spending all my money on) all things skincare.</p>
-                <p>Keep scrolling to see the projects I've created and how to get in contact with me.</p>
-            </div>
-            <div class="section experience" id="experience-section" >
-                <h1>Experience</h1>
-                <!-- <div class="anim"></div> -->
-                <ol class="experience-list"> 
-                    <li class="experience-item">
-                        <svg height="20" width="20" class="circle-svg one">
-                            <circle cx="10" cy="10" r="10" class="experience-circle" fill="#00755e"/>
-                        </svg>
-                        <div class="experience-text deloitte">
-                            <img src="assets/us-deloitte-logo.webp" alt="deloitte logo">
-                            <h2>Deloitte</h2>
-                            <p>Risk Advisory Consultant</p>
-                            <p>September 2017 - present</p>
-                        </div>
-                    </li>
-                    <li class="experience-item" >
-                        <svg height="20" width="20" class="circle-svg two">
-                            <circle cx="10" cy="10" r="10" class="experience-circle" fill="#00755e"/>
-                        </svg>
-                        <div class="experience-text jump">
-                            <img src="assets/the-jump-digital-school.png" alt="The Jump Digital School logo">
-                            <h2>The Jump Digital School</h2>
-                            <p>Software Engineer Training</p>
-                            <p>August 2020 - April 2021</p>
-                        </div>
-                    </li>
-                    <li class="experience-item">
-                        <svg height="20" width="20" class="circle-svg three">
-                            <circle cx="10" cy="10" r="10" class="experience-circle" fill="#00755e"/>
-                        </svg>
-                        <div class="experience-text kings">
-                            <img src="assets/kcl-logo.png" alt="King's College London logo">
-                            <h2>King's College London</h2>
-                            <p>BSc (Hons) Mathematics</p>
-                            <p>September 2014 - June 2017</p>
-                        </div>
-                    </li>
-                    <li class="experience-item">
-                        <svg height="20" width="20" class="circle-svg four">
-                            <circle cx="10" cy="10" r="10" class="experience-circle" fill="#00755e"/>
-                        </svg>
-                        <div class="experience-text kegs">
-                            <h2>A-Levels</h2>
-                            <p>King Edward IV Grammar School</p>
-                            <p>Mathematics: A*, Further Mathematics: B, English: B</p>
-                            <p>September 2012 - July 2014</p>
-                        </div>
-                    </li>
-                    <li class="experience-item">
-                        <svg height="20" width="20" class="circle-svg five">
-                            <circle cx="10" cy="10" r="10" class="experience-circle" fill="#00755e"/>
-                        </svg>
-                        <div class="experience-text moulsham">
-                            <h2>GCSEs</h2>
-                            <p>Moulsham High School</p>
-                            <p>11 GCSEs - grade A - C, including Maths and English</p>
-                            <p>September 2007 - July 2012</p>
-                        </div>
-                    </li>
-                </ol>
-                <svg viewBox="-100 -50 200 100" id='timeline' preserveAspectRatio="none" height=100% width=100%>
-                    <path d="M -99 -49 C -80 25, -70 25, 0 -5 S 25 60 ,70 20" stroke="#00755e" stroke-width="0.5" fill="transparent" stroke-linecap="round"/>
-                </svg>
-            </div>
-            <div class="section" >
-                <div class="project-grid-container">
-                    <div class="project-grid">
-                        <h1>Projects</h1>
-                        <div class='overlay'></div>
-                    </div>
-                    <div class="project-grid">
-                        <button class="modal-btn">
-                            <h2 class="pg-title">Full Stack Language Learning App</h2>
-                            <div class='overlay'></div>
-                        </button>
-                    </div>
-                    <div class="project-grid to-do-serverless">
-                        <button class="modal-btn">
-                            <h2 class="pg-title">Serverless To-Do App</h2>
-                            <div class='overlay'></div>
-                        </button>
-                    </div>
-                    <div class="project-grid skincare-shelf">
-                        <button class="modal-btn">
-                            <h2 class="pg-title">GraphQL Skincare Shelf</h2>
-                            <div class='overlay'></div>
-                        </button>
-                    </div>
-                    <div class="project-grid fe-mentor">
-                        <button class="modal-btn">
-                            <h2 class="pg-title">FrontEnd Mentor Challenge</h2>
-                            <div class='overlay'></div>
-                        </button>
-                    </div>
-                    <div class="project-grid kkw">
-                        <button class="modal-btn"> 
-                            <h2 class="pg-title">KKW Beauty Homage Page</h2>
-                            <div class='overlay'></div>
-                        </button>
-                    </div>
-                    <div class="project-grid sim-taste">
-                        <button class="modal-btn">
-                            <h2 class="pg-title">Similar Tastes</h2>
-                            <div class='overlay'></div>
-                        </button>
-                    </div>
-                    <div class="project-grid hotel">
-                        <button class="modal-btn">
-                            <h2 class="pg-title">Hotel Management App</h2>
-                            <div class='overlay'></div>
-                        </button>
-                    </div>
-                    <div class="project-grid african-hway">
-                        <button class="modal-btn">
-                            <h2 class="pg-title">CSS Creative Challenge</h2>
-                            <div class='overlay'></div>
-                        </button>
-                    </div>
-                </div> 
-                <div class="modal">
-                    <div class="modal-content">
-                        <div class="modal-flex">
-                            <h2>Full Stack Language Learning App</h2>
-                            <span class="close">&times;</span>
-                        </div>
-                        <div class="modal-flex">
-                            <img src="" alt="">
-                            <p>Fullstack React app for language learning. Users list words they think they've learned in their target language and are tested on them via notifications. Auth0 used for authentication and MaterialUI used for front end. <br><br><a class="modal-link" target="_blank" href="https://github.com/AyibaC/language_app">See more</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal">
-                    <div class="modal-content">
-                        <div class="modal-flex">
-                            <h2>Serverless To-Do App</h2>
-                            <span class="close">&times;</span>
-                        </div>
-                        <div class="modal-flex">
-                            <img src="./assets/to-do-list.png" alt="Screenshot of to-do list app's UI">
-                            <p>Serverless to-do list app built using a React front end with a Firestore database <br><br><a class="modal-link" target="_blank" href="#">See more</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal">
-                    <div class="modal-content">
-                        <div class="modal-flex">
-                            <h2>GraphQL Skincare Shelf</h2>
-                            <span class="close">&times;</span>
-                        </div>
-                        <div class="modal-flex">
-                            <img src="./assets/skincare-shelf-screenshot.png" alt="Screenshot of skincare shelf app">
-                            <p>CRUD app for storing the details of a user's skincare collection. Bootstrapped with create React app and using a GraphQL backend.<br><br><a class="modal-link" target="_blank" href="#">See more</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal">
-                    <div class="modal-content">
-                        <div class="modal-flex">
-                            <h2>Frontend Mentor Challenge</h2>
-                            <span class="close">&times;</span>
-                        </div>
-                        <div class="modal-flex">
-                            <img src="./assets/fe-mentor-screenshot.png" alt="Screenshot of frontend mentor project">
-                            <p>CSS implementation of UI design on figma <br><br><a class="modal-link" target="_blank" href="#">See more</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal">
-                    <div class="modal-content">
-                        <div class="modal-flex">
-                            <h2>KKW Beauty Homage Page</h2>
-                            <span class="close">&times;</span>
-                        </div>
-                        <div class="modal-flex">
-                            <img src="./assets/kkw-screenshot.png" alt="Screenshot of kkw beauty homage page project">
-                            <p>A copy of the home page of kkwbeauty.com using CSS only <br><br><a class="modal-link" target="_blank" href="#">See more</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal">
-                    <div class="modal-content">
-                        <div class="modal-flex">
-                            <h2>Similar Tastes</h2>
-                            <span class="close">&times;</span>
-                        </div>
-                        <div class="modal-flex">
-                            <img src="./assets/similar_tastes_screenshot.png" alt="Screenshot of TasteDive API project">
-                            <p>App using the TasteDive API where users enter their interest (music, films etc.) and are suggested similar things they may like. UI built using Bootstrap framework.<br><br><a class="modal-link" target="_blank" href="https://github.com/AyibaC/TasteDive_app">See more</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal">
-                    <div class="modal-content">
-                        <div class="modal-flex">
-                            <h2>Hotel Management App</h2>
-                            <span class="close">&times;</span>
-                        </div>
-                        <div class="modal-flex">
-                            <img src="./assets/hotel-mgmt-screenshot.png" alt="Screenshot of hotel management app project">
-                            <p>JavaScript CRUD app simulating the management of a hotel where the user can add and edit rooms and check guests in and out. UI built using UIKit framework. <br><br><a class="modal-link" target="_blank" href="https://github.com/AyibaC/Hotel_Management_App">See more</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal">
-                    <div class="modal-content">
-                        <div class="modal-flex">
-                            <h2>CSS Creative Challenge</h2>
-                            <span class="close">&times;</span>
-                        </div>
-                        <div class="modal-flex">
-                            <img src="./assets/african-highway.png" alt="Screenshot of css creative project">
-                            <p>Moving image designed by myself using CSS and SVG only <br><br><a class="modal-link" target="_blank" href="https://github.com/AyibaC/african_highway">See more</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section contact">
-                <h1>Get in touch at...</h1> 
-                <!-- email, phone, github, linkedin -->
-                <div class="contact-container">
-                    <a title="email" class="email-link" href="mailto:ayibacesario@hotmail.co.uk"><i class="far fa-envelope"></i>ayibacesario@hotmail.co.uk</a>
-                    <div class="small-contact-icons">
-                        <a title="GitHub" href="https://github.com/AyibaC?tab=repositories" target="_blank"><i class="fab fa-github"></i></a> 
-                        <a title="CodePen" href="https://codepen.io/AyibaC" target="_blank"><i class="fab fa-codepen"></i></a> 
-                        <a title="LinkedIn" href="https://www.linkedin.com/in/ayiba-cesario-a62871136/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer>
-    </footer>
+        </main>
+        <footer>
+        </footer>
+    </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.trunk.min.js"></script>
+<script>
+    VANTA.TRUNK({
+    el: "#homepage",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 500.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x544598,
+    backgroundColor: 0xf3cfc6,
+    spacing: 4.00,
+    chaos: 4.50
+    })
+</script>
 </html>
 
-<!-- animation -->
