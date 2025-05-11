@@ -11,19 +11,26 @@ a:-webkit-any-link {
     text-decoration: none;
   }
 
+main:not(.homepage) {
+  margin: 2%;
+}
+
 nav {
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
-  margin: 2%;
   z-index: 1;
 }
 
-a:hover, .contact-link:hover {
+a:hover, .contact-link:hover, #home-link:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 /* HOME PAGE */
+#home-nav {
+  margin: 2%;
+}
 
 .home-content {
   display: grid;
@@ -80,6 +87,7 @@ a:hover, .contact-link:hover {
 
 ul {
   list-style-type: none;
+  padding: 0;
 }
 
 li {
@@ -88,14 +96,14 @@ li {
 
 /* CONTACT PAGE */
 
-.container.contact {
+#contact-page .container.contact {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100%;
 }
 
-.container.contact .text {
+#contact-page .container.contact .text {
   height: 90vh;
   width: 90vw;
   background: rgba(243, 207, 198, 0.7);
@@ -104,10 +112,177 @@ li {
   justify-content: center;
 }
 
-.container.contact .text ul {
+#contact-page .container.contact .text ul {
   width: 30%;
   margin: auto;
 }
+
+/* PROJECT PAGE */
+.section {
+  max-width: 1200px;
+  width: 80vw;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.tab {
+  overflow: hidden;
+  position: sticky;
+  top: 2%;
+  width: 100%;
+  background-color: #f3cfc6;
+  border-bottom-style: solid;
+  z-index: 3;
+}
+
+
+.tab button {
+  background-color: inherit;
+  color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  text-decoration: underline;
+}
+
+.tab button.active {
+  border-top-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-bottom-style: none;
+}
+
+.tabcontent {
+  animation: fadeEffect 1s;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-rows: repeat(5,1fr);
+  row-gap: 1%;
+}
+
+#css {
+  display: none;
+}
+
+.project {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.project:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.project-image {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  background: rgba(243, 207, 198, 0.5);
+  visibility: hidden;
+}
+
+.project-image:hover .overlay {
+  visibility: visible;
+}
+
+.project-content {
+  min-width: 50%;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project:nth-child(even) .project-content{
+  text-align: right;
+}
+
+.project .description {
+  position:relative;
+  left: 20%;
+  z-index: 2;
+  padding-inline-start: 1.5%;
+  background-color: #f0c3b8
+}
+
+.project:nth-child(even) .description{
+  left: auto;
+  right: 20%;
+  text-align: right; 
+  padding-inline-end: 1.5%;
+}
+
+.project ul {
+  display: flex;
+}
+
+.project:nth-child(even) ul{
+  justify-content: flex-end;
+}
+
+.project li {
+  margin-inline-end: 5%;
+}
+
+.project:nth-child(even) li{
+  margin-inline: 5% 0;
+}
+
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* EXPERIENCE PAGE */
+.slider {
+  display: grid;
+  grid-template-columns: var(--work, 3fr) var(--training, 1fr) var(--education, 1fr);
+  transition: all 0.6s ease;
+  height: 90vh;
+}
+
+.slide {
+  cursor: pointer;
+  overflow: hidden;
+  height: 100%;
+}
+
+.work {
+  background-image: url('./../assets/IMG_6384.jpeg')
+}
+
+.training {
+  background-image: url('./../assets/IMG_6447.jpeg')
+}
+
+.education {
+  background-image: url('./../assets/IMG_6221.jpeg')
+}
+
 
 @media (min-device-width: 768px) {
   .image-container {

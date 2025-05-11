@@ -1,85 +1,3 @@
-//enable full page
-const myFullPage = new fullpage('#fullpage',{
-    licenseKey: '3310F724-FAB2489A-857B00AC-B4CA87B4',
-    anchors:['home','about','experience','projects','contact'],
-    onLeave: function(origin, destination, direction){
-		var leavingSection = this;
-
-		if(origin.anchor == 'about' && direction =='down'){
-			const path = anime.path('#timeline path');
-            console.log('path', path);
-            const animation = anime({
-                targets: '.experience-item',
-                translateX: path('x'),
-                translateY: path('y'),
-                delay: anime.stagger(500, {from: 'last'}),
-                easing: 'linear',
-                duration: 2000,
-                loop: false
-                });
-            setTimeout(animation.pause, 2000);
-            const fade = function(){
-                const text = document.getElementsByClassName('experience-text');
-                for (const x of text) {
-                    x.style.opacity = "1"
-                    // x.style.animation = "fadeIn ease 2s";
-                    // x.style.animationFillMode = "forwards";
-                }
-                
-            };
-            setTimeout(fade, 2000);
-            // animation.restart();
-		}
-	},
-    afterLoad: function(origin, destination, direction){
-		var loadedSection = this;
-        console.log('experience section loaded')
-		if(origin.anchor == 'experience' && destination.anchor=='experience'){
-
-			const path = anime.path('#timeline path');
-            console.log('path', path);
-            const animation = anime({
-                targets: '.experience-item',
-                translateX: path('x'),
-                translateY: path('y'),
-                delay: anime.stagger(500, {from: 'last'}),
-                easing: 'linear',
-                duration: 2000,
-                loop: false
-                });
-            setTimeout(animation.pause, 2000);
-            const fade = function(){
-                const text = document.getElementsByClassName('experience-text');
-                for (const x of text) {
-                    x.style.opacity = "1"
-                    // x.style.animation = "fadeIn ease 2s";
-                    // x.style.animationFillMode = "forwards";
-                }
-                
-            };
-            setTimeout(fade, 2000);
-            // animation.restart();
-		}
-	},
-});
-
-//makes skills show after clicking on icon
-const skillsIcons = document.getElementsByClassName('skill-logo');
-console.log('skillsIcons', skillsIcons);
-const hiddenClass = 'hidden';
-for(const i of skillsIcons){
-    i.addEventListener("click", (e) => {
-        e.preventDefault();
-            if (i.nextElementSibling.classList.contains(hiddenClass)){
-                i.nextElementSibling.classList.remove(hiddenClass);
-                i.previousElementSibling.classList.remove(hiddenClass);
-            } else {
-                i.nextElementSibling.classList.add(hiddenClass);
-                i.previousElementSibling.classList.add(hiddenClass);
-            }
-    });
-};
-
 //project modals
 const modals = document.getElementsByClassName("modal");
 const btn = document.getElementsByClassName("modal-btn");
@@ -122,37 +40,95 @@ for (let i=0; i<modals.length; i++) {
 
 
 //open contact page
-let contactLink = document.getElementsByClassName('contact-link')[0];
 const homepage = document.querySelector("#homepage main");
-contactLink.addEventListener("click",(e)=>{
-    e.preventDefault();
-    if(document.getElementsByClassName("home-content").length > 0){
-        console.log("found home-content");
-        const homeContent = document.getElementsByClassName("home-content")[0];
-        homeContent.remove()
+const homeNav = document.getElementById("home-nav");
 
-        const contact = document.createElement("div");
-        contact.classList.add("container", "contact");
-        contact.innerHTML = `<div class="text">
-                    <h1>Get in touch...</h1>
-                    <ul>
-                        <li><a title="email" class="email-link" href="mailto:ayibacesario@hotmail.co.uk"><i class="far fa-envelope"></i> ayibacesario@hotmail.co.uk</a></li>
-                        <li><a title="GitHub" href="https://github.com/AyibaC?tab=repositories" target="_blank"><i class="fab fa-github"></i> AyibaC</a></li>
-                        <li><a title="LinkedIn" href="https://www.linkedin.com/in/ayiba-cesario-a62871136/" target="_blank"><i class="fab fa-linkedin"></i> Ayiba Cesario</a></li>
-                    </ul>
-                </div>`;
-        homepage.appendChild(contact);
-    } else {
-        console.log("didn't find home-content");
-        const contact = document.getElementsByClassName("container contact")[0];
-        contact.remove();
+function setContactListener() {
+    const contactLink = document.getElementsByClassName('contact-link')[0];
+    contactLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        if(document.getElementsByClassName("home-content").length > 0){
+            const homeContent = document.getElementsByClassName("home-content")[0];
+            homeContent.remove();
 
-        const homeContent = document.createElement("div");
-        homeContent.classList.add("home-content");
-        homeContent.innerHTML = `<h1 class="home-title">Ayiba C. Cesario</h1>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis</p>`;
-        homepage.appendChild(homeContent);
+            homeNav.innerHTML = `<span id="home-link">Home</span>`;
+
+            const contact = document.createElement("div");
+            contact.classList.add("container", "contact");
+            contact.innerHTML = `<div class="text">
+                <h1>Get in touch...</h1>
+                <ul>
+                    <li><a title="email" class="email-link" href="mailto:ayibacesario@hotmail.co.uk"><i class="far fa-envelope"></i> ayibacesario@hotmail.co.uk</a></li>
+                    <li><a title="GitHub" href="https://github.com/AyibaC?tab=repositories" target="_blank"><i class="fab fa-github"></i> AyibaC</a></li>
+                    <li><a title="LinkedIn" href="https://www.linkedin.com/in/ayiba-cesario-a62871136/" target="_blank"><i class="fab fa-linkedin"></i> Ayiba Cesario</a></li>
+                </ul>
+            </div>`;
+            homepage.appendChild(contact);
+
+
+            const homeLink = document.getElementById("home-link");
+            homeLink.addEventListener("click", (e) => {
+                e.preventDefault();
+                contact.remove();
+
+                homeNav.innerHTML = `
+                    <a href="./about.html">About</a>
+                    <a href="./experience.html">Experience</a>
+                    <a href="./projects.html">Projects</a>
+                    <span class="contact-link">Contact</span>`;
+
+                const homeContent = document.createElement("div");
+                homeContent.classList.add("home-content");
+                homeContent.innerHTML = `
+                    <h1 class="home-title">Ayiba C. Cesario</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis</p>`;
+                homepage.appendChild(homeContent);
+
+                setContactListener();
+            });
+        }
+    });
+}
+setContactListener();
+
+
+
+//switch tabs on project page
+function openTab(e, tabName) {
+    const tabcontent = document.getElementsByClassName("tabcontent");
+    for(i = 0; i < tabcontent.length; i++){
+    tabcontent[i].style.display = "none";
     };
-    
-})
 
+    const tablinks = document.getElementsByClassName("tablinks");
+    for(i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+    };
+
+    document.getElementById(tabName).style.display = "block";
+    e.currentTarget.className += " active";
+    };
+
+//default open javascript tab    
+document.getElementById("defaultOpen").click();
+
+
+//OPERATE ACCORDION ON EXPERIENCE PAGE
+function moveExperience(e,slideName){
+    e.preventDefault();
+    const slider = document.getElementsByClassName("slider")[0];
+
+    if(slideName==="work"){
+        slider.style.setProperty("--work", "3fr");
+        slider.style.setProperty("--training", "1fr");
+        slider.style.setProperty("--education", "1fr");
+    } else if(slideName==="training"){
+        slider.style.setProperty("--work", "1fr");
+        slider.style.setProperty("--training", "3fr");
+        slider.style.setProperty("--education", "1fr");
+    } else if(slideName==="education"){
+        slider.style.setProperty("--work", "1fr");
+        slider.style.setProperty("--training", "1fr");
+        slider.style.setProperty("--education", "3fr");
+    };
+}

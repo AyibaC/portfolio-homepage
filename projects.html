@@ -1,8 +1,4 @@
-<!-- background colour change on scroll
- Card flip?
- screenshot next to description a la britanny chiang
- accordion tabs for css vs js -->
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,7 +26,7 @@
     <!-- SCRIPTS -->
     <!-- Third party Scripts -->
     <!-- <script type="text/javascript" src="fullpage.js"></script> -->
-    <script src="https://kit.fontawesome.com/2c915421c0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-NN33hT3+..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js" integrity="sha512-HqbDsHIJoZ36Csd7NMupWFxC7e7aX2qm213sX+hirN+yEx/eUNlZrTWPs1dUQDEW4fMVkerv1PfMohR1WdFFJQ==" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
 
@@ -40,14 +36,224 @@
 <body>
     <header>
     </header>
-    <main>
+    <main id="project-page">
         <nav>
             <a href="./index.html">Home</a>
         </nav>
+        <h1>Projects</h1>
+        <div class="section">
+            <section>
+                <div class="tab">
+                    <button class="tablinks active" onclick="openTab(event, 'javascript')" id="defaultOpen">JavaScript</button>
+                    <button class="tablinks" onclick="openTab(event, 'css')">CSS Only</button>
+                </div>
+                <div id="javascript" class="tabcontent">
+                    <div class="project linguini">
+                        <div class="project-content">
+                            <h2 class="title">Linguini</h2>
+                            <div class="description">
+                                <p>Fullstack React app for language learning. Users list words they think they've learned in their target language and are tested on them via notifications. Auth0 used for authentication and MaterialUI used for front end.</p>
+                            </div>
+                            <div class="stack">
+                                <ul>
+                                    <li>React</li>
+                                    <li>IBM Watson</li>
+                                    <li>Bulma</li>
+                                </ul>
+                            </div>
+                            <div class="links">
+                                <a href="#" title="GitHub" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="#" title="External Link" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit</a>
+                            </div>
+                        </div>
+                        <div class="project-image">
+                            <img class="screenshot">
+                            <div class="overlay"></div>
+                        </div>
+                        
+                    </div>
+                    <div class="project tastes">
+                        <div class="project-content">
+                            <h2 class="title">Similar Tastes</h2>
+                            <div class="description">
+                                <p>App using the TasteDive API where users enter their interest (music, films etc.) and are suggested similar things they may like. UI built using Bootstrap framework.</p>
+                            </div>
+                            <div class="stack">
+                                <ul>
+                                    <li>React</li>
+                                    <li>TasteDive API</li>
+                                </ul>
+                            </div>
+                            <div class="links">
+                                <a href="#" title="GitHub" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="#" title="External Link" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit</a>
+                            </div>
+                        </div>
+                        <div class="project-image">
+                            <img src="assets/similar_tastes_screenshot.png" alt="Screenshot of Similar Tastes app" class="screenshot">
+                            <div class="overlay"></div>
+                        </div>
+                    </div>
+                    <div class="project skin">
+                        <div class="project-content">
+                            <h2 class="title">Skincare Shelf</h2>
+                            <div class="description">
+                                <p>CRUD app for storing the details of a user's skincare collection. Bootstrapped with create React app and using a GraphQL backend.</p>
+                            </div>
+                            <div class="stack">
+                                <ul>
+                                    <li>React</li>
+                                    <li>HyGraph</li>
+                                    <li>Bootstrap</li>
+                                </ul>
+                            </div>
+                            <div class="links">
+                                <a href="#" title="GitHub" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="#" title="External Link" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit</a>
+                            </div>
+                        </div>
+                        <div class="project-image">
+                            <img src="assets/skincare-shelf-screenshot.png" alt="Screenshot of Skincare Shelf app" class="screenshot">
+                            <div class="overlay"></div>
+                        </div>
+                    </div>
+                    <div class="project hotel">
+                        <div class="project-content">
+                            <h2 class="title">Hotel Management App</h2>
+                            <div class="description">
+                                <p>JavaScript CRUD app simulating the management of a hotel where the user can add and edit rooms and check guests in and out. UI built using UIKit framework. </p>
+                            </div>
+                            <div class="stack">
+                                <ul>
+                                    <li>UIKit</li>
+                                    <li>Object Oriented Programming</li>
+                                </ul>
+                            </div>
+                            <div class="links">
+                                <a href="#" title="GitHub" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="#" title="External Link" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit</a>
+                            </div>
+                        </div>
+                        <div class="project-image">
+                            <img src="assets/hotel-mgmt-screenshot.png" alt="Screenshot of Hotel Management app" class="screenshot">
+                            <div class="overlay"></div>
+                        </div>
+                    </div>
+                    <div class="project todo">
+                        <div class="project-content">
+                            <h2 class="title">To Do List</h2>
+                            <div class="description">
+                                <p>Serverless to-do list app built using a React front end with a Firestore database</p>
+                            </div>
+                            <div class="stack">
+                                <ul>
+                                    <li>Firebase</li>
+                                    <li>React</li>
+                                </ul>
+                            </div>
+                            <div class="links">
+                                <a href="#" title="GitHub" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="#" title="External Link" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit</a>
+                            </div>    
+                        </div>
+                        <div class="project-image">
+                            <img src="assets/to-do-list.png" alt="Screenshot of To Do List app" class="screenshot">
+                            <div class="overlay"></div>
+                        </div>
+                    </div>
+                    <div class="project portfolio">
+                        <div class="project-content">
+                            <h2 class="title">Portfolio Homepage</h2>
+                            <div class="description">
+                                <p>Landing page for my development portfolio and all the info you need about me. The site you're on now!</p>
+                            </div>
+                            <div class="stack">
+                                <ul>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                </ul>
+                            </div>
+                            <div class="links">
+                                <a href="#" title="GitHub" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                        <div class="project-image">
+                            <img src="" alt="Screenshot of Portfolio Homepage" class="screenshot">
+                            <div class="overlay"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="css" class="tabcontent">
+                    <div class="project fe-mentor">
+                        <div class="project-content">
+                            <h2 class="title">Frontend Mentor Challenge</h2>
+                            <div class="description">
+                                <p>CSS implementation of UI design on figma</p>
+                            </div>
+                            <div class="stack">
+                                <ul>
+                                    <li>CSS</li>
+                                    <li>Figma</li>
+                                </ul>
+                            </div>
+                            <div class="links">
+                                <a href="#" title="GitHub" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="#" title="External Link" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit</a>
+                            </div>    
+                        </div>
+                        <div class="project-image">
+                            <img src="assets/fe-mentor-screenshot.png" alt="Screenshot of Frontend Mentor Challenge" class="screenshot">
+                            <div class="overlay"></div>
+                        </div>
+                    </div>
+                    <div class="project kkw">
+                        <div class="project-content">
+                            <h2 class="title">KKW Beauty Homage Page</h2>
+                            <div class="description">
+                                <p>A copy of the home page of kkwbeauty.com using CSS only</p>
+                            </div>
+                            <div class="stack">
+                                <ul>
+                                    <li>CSS</li>
+                                </ul>
+                            </div>
+                            <div class="links">
+                                <a href="#" title="GitHub" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="#" title="External Link" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit</a>
+                            </div>
+                        </div>
+                        <div class="project-image">
+                            <img src="assets/kkw-screenshot.png" alt="Screenshot of KKW Beauty Homage Page"  class="screenshot">
+                            <div class="overlay"></div>
+                        </div>
+                    </div>
+                    <div class="project highway">
+                        <div class="project-content">
+                            <h2 class="title">African Highway</h2>
+                            <div class="description">
+                                <p>Moving image designed by myself using CSS and SVG only</p>
+                            </div>
+                            <div class="stack">
+                                <ul>
+                                    <li>CSS</li>
+                                    <li>SVG</li>
+                                </ul>
+                            </div>
+                            <div class="links">
+                                <a href="#" title="GitHub" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="#" title="External Link" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit</a>
+                            </div>    
+                        </div>
+                        <div class="project-image">
+                            <img src="assets/african-highway.png" alt="Screenshot of CSS Creative Challenge" class="screenshot">
+                            <div class="overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
     </footer>
 </body>
 </html>
-
-<!-- animation -->
